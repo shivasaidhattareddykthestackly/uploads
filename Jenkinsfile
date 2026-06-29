@@ -26,7 +26,8 @@ pipeline {
                 echo 'Deploying application to Apache web server...'
                 sh '''
                     sudo rm -rf /var/www/html/*
-                    sudo cp -r * /var/www/html/
+                    sudo cp -r *.html /var/www/html/
+                    sudo ls -la /var/www/html/
                 '''
             }
         }
